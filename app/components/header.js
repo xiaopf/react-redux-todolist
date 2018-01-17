@@ -6,6 +6,7 @@ class Header extends React.Component{
         super(props);
 
         this.addText = this.addText.bind(this);
+        this.searchText = this.searchText.bind(this);
 	}
 
     addText(){
@@ -13,11 +14,16 @@ class Header extends React.Component{
     	this.refs.addText.value = "";
     }
 
+    searchText(){
+
+        this.props.onSearchText(this.refs.addText.value)
+    }
+
 	render(){
 		return (
 			<div className='header-component'>
 			    <h2>TODO LISTS</h2>
-				<input type="text" ref="addText"></input>
+				<input type="text" ref="addText" onKeyUp = {this.searchText}></input>
 				<button
 				   onClick = {this.addText}
 				>Add todos</button>

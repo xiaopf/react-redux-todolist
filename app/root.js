@@ -3,7 +3,7 @@ import Header from './components/header';
 import Body from './components/body';
 import Footer from './components/footer';
 
-import { SHOW_STYLE, addTodo, toggleTodo, delTodo, setFilter } from './redux/actions';
+import { SHOW_STYLE, addTodo, toggleTodo, delTodo, setFilter,searchTodo, } from './redux/actions';
 
 import { connect } from 'react-redux';
 
@@ -20,6 +20,7 @@ class Root extends React.Component{
             <div>
                <Header
 	               onAddText = { text => dispatch(addTodo(text))}
+	               onSearchText = { text => dispatch(searchTodo(text))}
                ></Header>
                <Body
                    todos = {showTodos}

@@ -1,4 +1,4 @@
-import { SHOW_STYLE, addTodo, toggleTodo, setFilter, delTodo } from './redux/actions';
+import { SHOW_STYLE, addTodo, toggleTodo, setFilter, searchTodo, delTodo } from './redux/actions';
 import { createStore } from 'redux';
 import  todoApp  from './redux/reducers';
 import {render} from 'react-dom';
@@ -19,10 +19,6 @@ store.dispatch(addTodo("the first text xiaopf!the first text xiaopf!the first te
 store.dispatch(addTodo("hahaha redux is so easy!"));
 store.dispatch(addTodo("yoyo ready go!"));
 store.dispatch(addTodo("adsf go!"));
-
-
-
-
 
 
 

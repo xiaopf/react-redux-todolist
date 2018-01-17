@@ -29,6 +29,7 @@ class Body extends React.Component{
 	                			todo = {todo}
 	                			index = {index}
 	                			key={index}
+	                			show={todo.show}
 	                			onCompleted = {this.toCompleted}
 	                			onDeleteTodo = {this.toDeleteTodo}
                 			></Todo>

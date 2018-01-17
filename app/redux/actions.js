@@ -1,5 +1,6 @@
 export let ADD_TODO = "ADD_TODO";
 export let DEL_TODO = "DEL_TODO";
+export let SEARCH_TODO = "SEARCH_TODO";
 export let TOGGOLE_TODO = "TOGGOLE_TODO";
 export let SET_FILTER = "SET_FILTER";
 export let SHOW_STYLE = {
@@ -20,6 +21,13 @@ export function delTodo(index){
     return {
         type:DEL_TODO,
         index
+    }
+}
+
+export function searchTodo(textChip){
+    return {
+        type:SEARCH_TODO,
+        textChip
     }
 }
 

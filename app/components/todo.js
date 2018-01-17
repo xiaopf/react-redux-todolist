@@ -23,7 +23,7 @@ class Todo extends React.Component{
 
 	render(){
 		return (
-			    <li className={`body-item ${this.props.todo.completed ? "completed" : ""} ` }
+			    <li className={`body-item ${this.props.todo.completed ? "completed" : ""}  ${this.props.show ? "" : "hide-it"}` }
 			        onClick ={this.completed}
 			    >
 				    {this.props.index+1}. {this.props.todo.text}
